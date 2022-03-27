@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 79
+target-version = ['py37']
+exclude = '''
+/(
+  | migrations
+  | /tests
+  | venv
+)/
+'''
+
+
+[tool.isort]
+profile = "black"
+src_paths = "api_yamdb"
+skip = "migrations,venv"
+skip_glob = "tests/*"
+default_section = "THIRDPARTY"
+# known_first_party = ["api", "reviews"]
+known_local_folder = ["api", "reviews", "users"]
+multi_line_output = 3
+line_length = 79
