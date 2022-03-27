@@ -1,63 +1,62 @@
 # api_yambd
-![Actions Status](https://github.com/RushGallyamov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ## Описание:
 
 Этот проект нужен чтобы продвинуться в обучении на Яндекс.Практикуме и
-попрактиковать навыки командой разработки.
+попрактиковать навыки развертывания ПО.
 
 
 ## Установка:
 
-1. Клонировать репозиторий и перейти в него в командной строке:
+1. Клонировать репозиторий:
 ```
-git clone git@github.com:losdmi/api_yamdb.git
+git clone git@github.com:RushGallyamov/yamdb_final.git
 ```
+2. Перейти в папку с файлом docker-compose.yaml:
 ```
-cd api_yamdb
-```
-
-2. Cоздать и активировать виртуальное окружение:
-```
-python3 -m venv env
-```
-```
-source venv/bin/activate
+cd yamdb_final/infra/
 ```
 
-3. Установить зависимости из файла requirements.txt:
+3. Собрать и запустить контейнер:
 ```
-python3 -m pip install --upgrade pip
-```
-```
-pip install -r requirements.txt
+docker-compose up -d --build
 ```
 
-4. Выполнить миграции:
+
+4. Выполнить миграции, создать суперпользователя, собрать статику:
 ```
-python3 api_yamdb/manage.py migrate
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-5. Запустить проект:
+5. Админка доступна:
 ```
-python3 api_yamdb/manage.py runserver
+http://localhost/admin/
 ```
+
+6. Развернутый проект можно посмотреть на странице:
+http://51.250.96.39/api/v1/
+
+
+Документация API на странице http://localhost/redoc/
 
 
 ## management-команда для загрузки сущностей из csv в базу
 
 Можно загрузить все сущности сразу:
 ```
-python3 api_yamdb/manage.py load_entity all
+docker-compose exec web python manage.py load_entity all
 ```
 
 Либо отдельно перечислять нужные сущности:
 ```
-python3 api_yamdb/manage.py load_entity category title
+docker-compose exec web python manage.py load_entity category title
 ```
 
+С уважением,
+Рашит Галлямов
 
-## Примеры:
-
-TODO добавить примеры вызовов апи
-
-Больше примеров на странице http://127.0.0.1:8000/redoc/
+Контакты:
+rashitgalliamov@yandex.ru
+https://github.com/RushGallyamov
