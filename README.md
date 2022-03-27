@@ -1,5 +1,5 @@
 # api_yambd
-
+![Actions Status](https://github.com/RushGallyamov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ## Описание:
 
 Этот проект нужен чтобы продвинуться в обучении на Яндекс.Практикуме и
@@ -35,11 +35,13 @@ docker-compose exec web python manage.py collectstatic --no-input
 http://localhost/admin/
 ```
 
-6. Развернутый проект можно посмотреть на странице:
+6. Документация API на странице http://localhost/redoc/
+```
+http://localhost/redoc/
+```
+
+Развернутый проект можно посмотреть на странице:
 http://51.250.96.39/api/v1/
-
-
-Документация API на странице http://localhost/redoc/
 
 
 ## management-команда для загрузки сущностей из csv в базу
