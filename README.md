@@ -1,5 +1,5 @@
 # api_yambd
-
+![Actions Status](https://github.com/RushGallyamov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ## Описание:
 
 Этот проект нужен чтобы продвинуться в обучении на Яндекс.Практикуме и
