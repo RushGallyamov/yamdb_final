@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   tests:
+    name: Тестирование
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -21,7 +22,8 @@ jobs:
     - name: Тестирование на pep8 и Django Tests
       run: |
         python -m flake8
-        python api_yamdb/manage.py test
+        cd api_yamdb/
+        python manage.py test
 
   build_and_push_to_docker_hub:
     name: Отправка Docker-образа на Docker-hub
