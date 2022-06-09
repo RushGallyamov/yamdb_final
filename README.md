@@ -1,9 +1,12 @@
 # api_yambd
 ![Actions Status](https://github.com/RushGallyamov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat-square&logo=Django%20REST%20Framework)](https://www.django-rest-framework.org/)
 ## Описание:
 
-Этот проект нужен чтобы продвинуться в обучении на Яндекс.Практикуме и
-попрактиковать навыки развертывания ПО.
+Командный проект. Yatube REST API с документацией к нему, отвечал за взаимодействие с пользователем, авторизацию и предоставление разрешений на взаимодействие с объектами БД.
+
 
 
 ## Установка:
